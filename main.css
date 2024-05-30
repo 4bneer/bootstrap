@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif Old Uyghur", serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 70px;
+    margin-top: 15px;
+}
+
+.lines {
+    display: block;
+    width: 100%;
+    padding: 1px;
+    margin-top: 12px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav div a,
+nav li{
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    border-bottom: 2px solid white;
+    transition: border-bottom 0.15s;
+}
+
+
+
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+nav img {
+    width: 12px;
+    margin-left: 5px;
+}
+
+.langList {
+    margin: 0;
+    padding: 0;
+}
+
+#dropdown {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: none;
+}
+
+#dropdown li {
+    margin: 5px 0;
+    border-bottom: none;
+    font-size: 14px;
+
+}
+
+#dropdown li:hover {
+    cursor: pointer;
+    color: #979797;
+}
+
+
+.post {
+    width: 300px;
+    margin: 20px 10px;
+}
+
+.post h2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.post p {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+#main {
+    flex-wrap: wrap;
+}
+
+#asidePosts{
+    display: block;
+}
