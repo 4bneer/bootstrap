@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Serif Old Uyghur", serif;
+    font-family: "IBM Plex Serif", serif;
 }
 
-.container {
+header .container {
     display: flex;
     justify-content: center;
 }
@@ -23,7 +23,7 @@
     display: block;
     width: 100%;
     padding: 1px;
-    margin-top: 12px;
+    margin: 12px 0 24px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -41,7 +41,7 @@ nav ul li {
 }
 
 nav div a,
-nav li{
+nav li {
     text-decoration: none;
     color: black;
     margin: 0 20px;
@@ -86,24 +86,69 @@ nav img {
 
 
 .post {
-    width: 300px;
+    width: 240px;
     margin: 20px 10px;
 }
 
 .post h2 {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .post p {
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
-#main {
-    flex-wrap: wrap;
+
+aside {
+    border-left: 1px solid #979797;
 }
 
-#asidePosts{
-    display: block;
+.asidePosts {
+    width: 200px;
+    margin: 20px 10px;
+}
+
+.asidePosts h2 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.asidePosts p {
+    font-size: 11px;
+    font-weight: 300;   
+}
+
+footer {
+    border-top: 1px solid black;
+    margin: 24px 0;
+}
+
+footer h2 {
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+footer button{
+    border: 1px solid #326891;
+    border-radius: 4px;
+    background-color: #567b95;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 5px 10px;
+    width: 120px;
+    margin-left: 100px;
+    transition: background-color .4s;
+}
+
+footer button:hover {
+    background-color: #326891;
+    cursor: pointer;
 }
