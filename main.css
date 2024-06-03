@@ -15,7 +15,7 @@ header .container {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 70px;
+    font-size: 4.5em;
     margin-top: 15px;
 }
 
@@ -41,7 +41,9 @@ nav ul li {
 }
 
 nav div a,
-nav li {
+nav li,
+#LangEng a,
+#LangPort a {
     text-decoration: none;
     color: black;
     margin: 0 20px;
@@ -75,11 +77,12 @@ nav img {
 #dropdown li {
     margin: 5px 0;
     border-bottom: none;
-    font-size: 14px;
+    font-size: 0.9em;
 
 }
 
-#dropdown li:hover {
+#LangEng a:hover,
+#LangPort a:hover {
     cursor: pointer;
     color: #979797;
 }
@@ -91,12 +94,12 @@ nav img {
 }
 
 .post h2 {
-    font-size: 20px;
+    font-size: 1.2em;
     font-weight: 700;
 }
 
 .post p {
-    font-size: 14px;
+    font-size: 0.8em;
     font-weight: 300;
 }
 
@@ -107,44 +110,71 @@ aside {
 
 .asidePosts {
     width: 200px;
-    margin: 20px 10px;
+    margin: 20px auto;
 }
 
 .asidePosts h2 {
-    font-size: 17px;
+    font-size: 1.1em;
     font-weight: 700;
 }
 
 .asidePosts p {
-    font-size: 11px;
-    font-weight: 300;   
+    font-size: 0.75em;
+    font-weight: 300;
 }
 
 footer {
-    border-top: 1px solid black;
     margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.line {
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    width: 100%;
+    height: 4px;
+    margin-top: 40px;
+}
+
+.footerText {
+    border: none;
+    width: 100%;
+}
+
+.footerTextTwo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.col>p {
+    text-align: center;
+}
+
 
 footer h2 {
     font-family: "Grenze Gotisch", serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 30px;
+    font-size: 2.2em;
     margin-bottom: 24px;
 }
 
-footer button{
+footer button {
     border: 1px solid #326891;
     border-radius: 4px;
     background-color: #567b95;
     color: white;
     font-family: sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.8em;
     padding: 5px 10px;
-    width: 120px;
-    margin-left: 100px;
+    width: 100%;
+    height: 30px;
     transition: background-color .4s;
 }
 
