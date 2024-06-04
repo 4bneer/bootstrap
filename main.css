@@ -90,7 +90,7 @@ nav img {
 
 .post {
     width: 240px;
-    margin: 20px 10px;
+    margin: 20px auto;
 }
 
 .post h2 {
@@ -168,14 +168,21 @@ footer button {
     border: 1px solid #326891;
     border-radius: 4px;
     background-color: #567b95;
-    color: white;
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 0.8em;
     padding: 5px 10px;
     width: 100%;
     height: 30px;
     transition: background-color .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer button a {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-decoration: none;
 }
 
 footer button:hover {

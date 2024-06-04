@@ -9,26 +9,34 @@ $(document).ready(function () {
         dropdown.hide();
     });
 
-    /* APLICAR A PARTIR DE CERTA RESOLUÇÃO (MOBILE)
-    
     $('nav div a').click(function () {
         $(this).css("color", "#979797").css("transition", "color 0.15s");
-
         const thiis = $('nav div a');
-
-        setTimeout(function(){
+        setTimeout(function () {
             thiis.css("color", "black")
         }, 300)
-})
+    });
+
+    $('#subscribeButton').click(function () {
+        $(this).css("background-color", "#326891").css("transition", "background-color .1s");
+        const thisButton = $('#subscribeButton');
+        setTimeout(function () {
+            thisButton.css("background-color", "#567b95")
+        }, 200)
+    });
+
+    /*
+    
+        --- FAZER SITE EM PT-BR
+        --- FAZER A PARTE DO SUBSCRIBE
+        --- FAZER O DROPDOWN FUNCIONAR BONITO
+        --- ADICIONAR NOTICIAS "REAIS"
+        --- DIVIDIR AS NOTICIAS NA RESOLUCAO COL-SM-6 PARA NAO FICAR ESPACO EM BRANCO
+
     */
 
-    // Variáveis para armazenar os limites de resolução
-
-
-
-
-
-
+    const smInitialResolution = 576;
+    const smFinalResolution = 767;
 
     const mdInitialResolution = 768;
     const mdFinalResolution = 991;
@@ -37,10 +45,10 @@ $(document).ready(function () {
     const lgFinalResolution = 1199;
 
     const lastResolution = 1200;
+    const firstResolution = 575
 
     const asideRemoved = $("aside").remove()
 
-    // Função para verificar se a resolução está entre os limites
     function isBetween(initial, final, widthResolution) {
         return (widthResolution >= initial) && (widthResolution <= final);
     }
@@ -49,7 +57,10 @@ $(document).ready(function () {
         return widthResolution >= initial
     }
 
-    // Função para atualizar as classes com base na resolução
+    function isUnder(initial, widthResolution) {
+        return widthResolution <= initial
+    }
+
     function updateClassesBasedOnResolution() {
         const widthResolution = $(window).width();
 
@@ -58,39 +69,56 @@ $(document).ready(function () {
                 $("div.col-lg-4")
                     .removeClass()
                     .addClass("col-3");
-                $("div.post>img").attr("src", "https://via.placeholder.com/240x190")
+                $("div.post>img").attr("src", "https://via.placeholder.com/240x190");
+                $("div.post").css("width", "240px");
                 $("#mainContent").append(asideRemoved);
                 break;
             case isBetween(lgInitialResolution, lgFinalResolution, widthResolution):
-                $("div.col-3")
-                    .addClass("col-lg-4")
-                    .removeClass("col-3");
-                $("div.post>img").attr("src", "https://via.placeholder.com/240x190")
+                $("div.col-3, div.col-md-4")
+                    .removeClass()
+                    .addClass("col-lg-4");
+                $("div.post>img").attr("src", "https://via.placeholder.com/240x190");
+                $("div.post").css("width", "240px");
                 $("aside").remove();
                 break;
             case isBetween(mdInitialResolution, mdFinalResolution, widthResolution):
-                $("div.col-3")
-                    .addClass("col-md-4")
-                    .removeClass("col-3");
-                $("div.post>img").attr("src", "https://via.placeholder.com/216x171")
+                $("div.col-3, div.col-lg-4, div.col-sm-6")
+                    .removeClass()
+                    .addClass("col-md-4");
+                $("div.post>img").attr("src", "https://via.placeholder.com/216x171");
+                $("div.post").css("width", "216px");
+                $("aside").remove();
+                break;
+
+            case isBetween(smInitialResolution, smFinalResolution, widthResolution):
+                $("div.col-3, div.col-md-4, div.col-sm-12")
+                    .removeClass()
+                    .addClass("col-sm-6");
+                $("div.post>img").attr("src", "https://via.placeholder.com/216x171");
+                $("div.post").css("width", "216px");
+                $("aside").remove();
+                break;
+
+            case isUnder(firstResolution, widthResolution):
+                $("div.col-3, div.col-sm-6")
+                    .removeClass()
+                    .addClass("col-sm-12");
+                $("div.post>img").attr("src", "https://via.placeholder.com/351x278");
+                $("div.post").css("width", "351px");
                 $("aside").remove();
                 break;
 
             default:
                 $("div.col-lg-4")
-                    .addClass("col-3")
-                    .removeClass();
+                    .removeClass()
+                    .addClass("col-3");
+                $("div.post").css("width", "240px");
                 $("#mainContent").append(asideRemoved);
                 break;
         }
 
     }
 
-    // Chamar a função de atualização quando a página carregar
     $(document).ready(updateClassesBasedOnResolution);
-
-    // Chamar a função de atualização sempre que a janela for redimensionada
     $(window).resize(updateClassesBasedOnResolution);
-
-
 })
