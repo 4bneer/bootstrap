@@ -28,9 +28,7 @@ $(document).ready(function () {
     /*
     
         --- FAZER SITE EM PT-BR
-        --- FAZER A PARTE DO SUBSCRIBE
         --- FAZER O DROPDOWN FUNCIONAR BONITO
-        --- ADICIONAR NOTICIAS "REAIS"
         --- DIVIDIR AS NOTICIAS NA RESOLUCAO COL-SM-6 PARA NAO FICAR ESPACO EM BRANCO
 
     */

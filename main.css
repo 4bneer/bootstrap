@@ -164,7 +164,7 @@ footer h2 {
     margin-bottom: 24px;
 }
 
-footer button {
+footer a {
     border: 1px solid #326891;
     border-radius: 4px;
     background-color: #567b95;
@@ -175,17 +175,14 @@ footer button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-footer button a {
+    text-decoration: none;
     color: white;
     font-family: sans-serif;
     font-weight: 600;
     font-size: 0.8em;
-    text-decoration: none;
 }
 
-footer button:hover {
+footer a:hover {
     background-color: #326891;
     cursor: pointer;
 }
