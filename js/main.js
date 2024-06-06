@@ -29,7 +29,6 @@ $(document).ready(function () {
     
         --- FAZER SITE EM PT-BR
         --- FAZER O DROPDOWN FUNCIONAR BONITO
-        --- DIVIDIR AS NOTICIAS NA RESOLUCAO COL-SM-6 PARA NAO FICAR ESPACO EM BRANCO
 
     */
 
@@ -45,7 +44,8 @@ $(document).ready(function () {
     const lastResolution = 1200;
     const firstResolution = 575
 
-    const asideRemoved = $("aside").remove()
+    const asideRemoved = $("aside").remove();
+    const lastRemoved = $("#lastPosts").remove();
 
     function isBetween(initial, final, widthResolution) {
         return (widthResolution >= initial) && (widthResolution <= final);
@@ -84,6 +84,9 @@ $(document).ready(function () {
                     .removeClass()
                     .addClass("col-md-4");
                 $("div.post>img").attr("src", "https://via.placeholder.com/216x171");
+                $(".langList li").click(function(){
+                    $("#dropdown").toggle();
+                });
                 $("div.post").css("width", "216px");
                 $("aside").remove();
                 break;
@@ -94,6 +97,9 @@ $(document).ready(function () {
                     .addClass("col-sm-6");
                 $("div.post>img").attr("src", "https://via.placeholder.com/216x171");
                 $("div.post").css("width", "216px");
+                $(".langList li").click(function(){
+                    $("#dropdown").toggle();
+                });
                 $("aside").remove();
                 break;
 
@@ -102,8 +108,12 @@ $(document).ready(function () {
                     .removeClass()
                     .addClass("col-sm-12");
                 $("div.post>img").attr("src", "https://via.placeholder.com/351x278");
+                $(".langList li").click(function(){
+                    $("#dropdown").toggle();
+                });
                 $("div.post").css("width", "351px");
                 $("aside").remove();
+
                 break;
 
             default:
