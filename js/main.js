@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const dropdown = $("#dropdown");
+    const dropdown = $("#dropdown-content");
 
     $(".langList").on('mouseenter', function () {
         dropdown.show();
@@ -28,7 +28,6 @@ $(document).ready(function () {
     /*
     
         --- FAZER SITE EM PT-BR
-        --- FAZER O DROPDOWN FUNCIONAR BONITO
 
     */
 

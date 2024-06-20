@@ -71,14 +71,22 @@ nav img {
     cursor: pointer;
 }
 
-#dropdown {
+.dropdown {
+    position: relative;
+}
+
+#dropdown-content {
     margin: 0;
     padding: 0;
     text-align: left;
     display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid black;
 }
 
-#dropdown li {
+#dropdown-content li {
     margin: 5px 0;
     border-bottom: none;
     font-size: 0.9em;
