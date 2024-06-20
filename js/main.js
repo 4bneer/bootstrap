@@ -25,12 +25,6 @@ $(document).ready(function () {
         }, 200)
     });
 
-    /*
-    
-        --- FAZER SITE EM PT-BR
-
-    */
-
     const smInitialResolution = 576;
     const smFinalResolution = 767;
 
@@ -88,6 +82,9 @@ $(document).ready(function () {
                 });
                 $("div.post").css("width", "216px");
                 $("aside").remove();
+                $(".langList li").click(function(){
+                    $("#dropdown-content").toggle();
+                });
                 break;
 
             case isBetween(smInitialResolution, smFinalResolution, widthResolution):
@@ -96,10 +93,10 @@ $(document).ready(function () {
                     .addClass("col-sm-6");
                 $("div.post>img").attr("src", "https://via.placeholder.com/216x171");
                 $("div.post").css("width", "216px");
-                $(".langList li").click(function(){
-                    $("#dropdown").toggle();
-                });
                 $("aside").remove();
+                $(".langList li").click(function(){
+                    $("#dropdown-content").toggle();
+                });
                 break;
 
             case isUnder(firstResolution, widthResolution):
@@ -112,7 +109,9 @@ $(document).ready(function () {
                 });
                 $("div.post").css("width", "351px");
                 $("aside").remove();
-
+                $(".langList li").click(function(){
+                    $("#dropdown-content").toggle();
+                });
                 break;
 
             default:
